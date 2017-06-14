@@ -1,0 +1,1 @@
+<div style='width:100%;border-top:1px solid #666;display:inline-block;'></div><span style='font-size:9px;display:{DISPLAY};'>Relatório gerado por {USUARIO} em {DATA_RELATORIO}</span></body></html>

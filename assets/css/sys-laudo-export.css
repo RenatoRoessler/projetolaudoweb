@@ -1,0 +1,23 @@
+.l-quebra{
+   page-break-after: always;
+}
+.tbl-l{
+	min-width: 100%;
+	width: 100%;
+	font-family: Arial, Tahoma, Consolas;
+	font-size:10pt;
+}
+.tbl-l-label{
+	font-size:5pt;
+	font-style: italic;
+}
+.tbl-l-content{
+	font-size:10pt;
+}
+.tbl-l-info-medico{
+	font-size: 12px;
+	text-align: center;
+}
+.tbl-signature{
+	/*width: 100px;*/
+}

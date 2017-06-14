@@ -1,0 +1,21 @@
+@CHARSET "ISO-8859-1";
+.tri{
+	position: absolute;
+	bottom:5%;
+	right: 0px;	
+	width: 0; 
+	height: 0;
+	border-right: 0px solid transparent;
+}
+.tri001 {border-left: 500px solid transparent;border-bottom: 90px solid #b1b1b1; z-index:-1;}
+.tri002 {border-left: 490px solid transparent;border-bottom: 150px solid #b5b5b5; z-index:-2;}
+.tri003 {border-left: 480px solid transparent;border-bottom: 200px solid #bababa; z-index:-3;}
+.tri004 {border-left: 470px solid transparent;border-bottom: 240px solid #bebebe; z-index:-4;}
+.tri005 {border-left: 460px solid transparent;border-bottom: 260px solid #c3c3c3; z-index:-5;}
+.tri006 {border-left: 450px solid transparent;border-bottom: 280px solid #c8c8c8; z-index:-6;}
+.tri007 {border-left: 440px solid transparent;border-bottom: 300px solid #ccc; z-index:-7;}
+.tri008 {border-left: 430px solid transparent;border-bottom: 315px solid #d1d1d1; z-index:-8;}
+.tri009 {border-left: 420px solid transparent;border-bottom: 330px solid #d6d6d6; z-index:-9;}
+.tri010 {border-left: 410px solid transparent;border-bottom: 340px solid #dadada; z-index:-10;}
+.tri011 {border-left: 400px solid transparent;border-bottom: 355px solid #dfdfdf; z-index:-11;}
+.tri012 {border-left: 390px solid transparent;border-bottom: 365px solid #e4e4e4; z-index:-12;}

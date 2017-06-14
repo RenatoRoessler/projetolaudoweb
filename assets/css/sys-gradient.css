@@ -1,0 +1,18 @@
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+    background: linear-gradient(to bottom, #1f1f1f 0%,#000000 100%);
+}
+.navbar-default {
+    background: linear-gradient(to bottom, #1f1f1f 0%,#000000 100%);
+}
+.main-container-form {
+    background: linear-gradient(to bottom, #1d1d1d 0%,#1b1b1b 100%) !important;
+}
+body{
+    background: linear-gradient(to bottom, #848484 0%,#6b6b6b 100%) !important;
+}
+.btn-primary{
+    background: linear-gradient(to bottom, #008cba 0%,#008cba 100%) !important;
+}
+.btn-danger{
+    background: linear-gradient(to bottom, #f04124 0%,#f04124 100%) !important;
+}

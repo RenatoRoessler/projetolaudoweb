@@ -1,0 +1,31 @@
+.perfil-menus ul{
+	list-style: none;
+}
+.perfil-menus ul li{
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+.perfil-label{
+	padding-top: 5px;
+	display: inline-block;
+}
+.perfil-label:hover{
+	text-decoration: underline;
+	cursor:default;
+}
+.sys-thumb-perfil{
+	min-width: 150px;max-width: 150px;width: 150px;
+}
+.sys-perfil-container{
+	margin: 0px; padding: 0px;
+}
+.sys-perfil-divisor{
+	margin-top:100px;
+}
+.sys-menu-visivel{
+	font-weight: bold;
+}
+.sys-menu-invisivel{
+	font-style: italic;
+	color:#aaa;
+}

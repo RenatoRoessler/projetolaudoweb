@@ -1,0 +1,55 @@
+body,html,a,p,div,td,span,input,table,th, *{
+	font-family: 'Trebuchet MS', sans-serif !important;
+}
+.col-main{
+	padding: 0px !important;
+}
+.sys-table{
+	width: 100%;
+	border-color: transparent !important;	
+}
+.sys-table-title{
+	font-weight: bold !important;
+}
+.sys-table-divisor{
+	font-size: 8px !important;
+	line-height: 8px !important;
+	padding: 3px !important;
+}
+.sys-table tr th{
+	text-align: left !important;
+	font-weight: normal;
+}
+.sys-table tr td{
+	text-align: left !important;
+}
+.sys-table thead tr th {
+	text-align: left !important;
+	font-weight: bold ;
+}
+.sys-report-label{
+	padding: 3px;
+	font-weight: bold;
+	background: #EEECE1;
+}
+.sys-report-info{
+	padding: 3px;
+}
+.sys-report-div-line{
+}
+.sys-label{
+    color: #666;
+    font-style:italic;
+    font-size: 10px;
+    margin-bottom: 0px;
+}
+.sys-content-1{
+    font-size: 12px;
+}
+.sys-content-2{
+    font-size: 13px;
+}
+ul, ol {
+	margin: 0 !important;
+	padding-left: 5px !important;
+}

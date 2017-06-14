@@ -1,0 +1,45 @@
+#
+#	Sql default
+
+select 
+      cst.digitadora,cst.datadig,cst.alterlaudo,c.codcst,c.codcst as consulta,cst.nroseq,c.prontuario,p.nome,c.datahora,cr.nome as nomeRecurso,
+	  cst.datarea, TO_CHAR(cst.datarea, 'DD/MM/YYYY') as dataatendimento,e.codexa as codexame,cst.nroseq as seq,
+      case when al.dataentrega is not null then 25 
+           WHEN CST.FM_PRONTOPARAENTREGA = 'S' THEN 29
+           WHEN TRUNC(fnc_calc_data_entrega2(CST.DTPREVISAOENTREGA,CST.CODGEX,c.codinst)/60) >= 24 and 
+                TRUNC(fnc_calc_data_entrega2(CST.DTPREVISAOENTREGA,CST.CODGEX,c.codinst)/60) <= 47 THEN 26
+           WHEN TRUNC(fnc_calc_data_entrega2(CST.DTPREVISAOENTREGA,CST.CODGEX,c.codinst)/60) >= 48 and 
+                TRUNC(fnc_calc_data_entrega2(CST.DTPREVISAOENTREGA,CST.CODGEX,c.codinst)/60) <= 71 THEN 27
+           WHEN TRUNC(fnc_calc_data_entrega2(CST.DTPREVISAOENTREGA,CST.CODGEX,c.codinst)/60) >= 72 THEN 28
+       ELSE TRUNC(fnc_calc_data_entrega2(CST.DTPREVISAOENTREGA,CST.CODGEX,c.codinst)/60) end as horasfaltante,
+       e.nome as nomeExame,al.realizado,al.fm_laudado,al.fm_digitado,al.fm_ditado,al.fm_revisado,al.fm_assinado,
+       al.fm_impresso,al.fm_liberado,al.fm_entregue,al.fm_pendente,al.FM_ENVELOPADO,al.FM_PRONTOPARAENTREGA,cst.codrea,
+       rea.nome as realizante,cv.nome as nomeconv,g.descricao as descricaogrp,s.nome as nomeSolicitante,reaAssinou.nome as assinou,
+       cst.dtassinado,rev.nome as revisado,cst.dtrevisalaudo,al.userenvelop,cst.apeldigitar,cst.userentrega,
+       al.dtenvelope,cst.dtdigitar,cst.dtprentrega,c.atendente,cst.obslaudo,i.fantasia,A.NOME as AG,p.nome as paciente,
+       cst.laudor, s.codsol, pl.formapagto,c.codconv,
+       case when cst.realizado = '8' then 'Impresso' 
+           when cst.realizado= '3' then 'Por laudar'
+           when cst.realizado= '2' then 'Atendido'
+           when cst.realizado= '1' then 'Em Atendimento'
+           when cst.realizado= '0' then 'Por Atender'
+       end RealizadoDESC,C.CODFAT, 
+       Pl.NOME AS NOMEPLANO,al.user_prontoparaentrega,al.user_liberou,al.codlaudo, ped.codatdped
+	   {{}}
+from   consulta c
+       inner join cstexame cst on ( c.codcst = cst.codcst )
+       inner join paciente p on ( c.prontuario = p.prontuario )
+       left join cm_recurso cr on ( cst.codrecurso = cr.codrecurso )
+       inner join exame e on ( cst.codexa = e.codexa )
+       left join realizante rea on ( cst.codrea = rea.codrea )
+       inner join convenio cv on ( c.codconv = cv.codconv )
+       inner join grpexame g on ( e.codgex =  g.codgex )
+       inner join Solicitante S on ( c.codsol = S.codsol )
+       left join realizante reaAssinou on ( cst.assinado = reaAssinou.codrea )
+       left join realizante rev on ( cst.revisalaudo = rev.codrea )
+       inner join instituicao i on ( c.codinst = i.codinst )
+       left join Agenda A on ( cst.codage = A.codage )
+       inner join plano pl on ( c.codplano = pl.codplano )
+       inner join atdpedexa ped on ( ped.codpedexa = cst.codpedexa )
+       inner join atd_laudo al on ( ped.codlaudo = al.codlaudo )
+ where 1=1

@@ -1,0 +1,18 @@
+h3,h4{
+	margin-bottom: 0px;
+}
+.sys-label{
+	margin-bottom: 1px;
+}
+.sys-lote-label{
+	font-size: 10px;
+	color: #999;
+	font-style: italic;
+	margin: 0px;
+	padding: 0px;
+}
+.sys-lote-content{
+	font-size: 16px;
+	font-weight: 300;
+	margin-bottom: 10px;
+}

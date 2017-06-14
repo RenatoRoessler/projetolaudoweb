@@ -1,0 +1,31 @@
+.sys-btn-filter-laudo{
+	float:right;
+	position: absolute; 
+	right:0px;
+}
+.sys-info-btn{
+	cursor: default !important;
+	margin: auto !important;
+}
+.sys-texto-padrao-container{
+	height: 130px !important;
+}
+.sys-texto-padrao-container-example{
+	height: 250px !important;
+	overflow-y: auto !important;  
+}
+.glyphicon-context-icon{
+	color:red !important;
+}
+.sys-texto-padrao-iframe{
+	border: 1px solid #ccc;
+	height: 230px;
+}
+#btnRecordPause{
+	margin-left:10px;
+	width: 40px;
+	height: 40px;
+	line-height: 23px !important;
+	padding: 8px 10px;
+	margin-top: 6px;
+}
